@@ -1,0 +1,22 @@
+{
+  "name": "bouvetint",
+  "version": "0.1.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "tape \"test/unit/**/*.js\" | tap-spec"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "http-shutdown": "^1.2.0",
+    "kth-style": "^3.0.0-beta.8",
+    "path": "^0.12.7",
+    "request": "^2.85.0",
+    "tap-spec": "^5.0.0"
+  },
+  "devDependencies": {
+    "rewire": "^4.0.1",
+    "rewire-global": "^1.0.11",
+    "tape": "^4.9.1"
+  }
+}
