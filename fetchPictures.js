@@ -63,27 +63,27 @@ async function displayPictures(req, res) {
             document.addEventListener('readystatechange', () => {
                 switch (document.readyState) {
                     case "loading":
-                        var div = document.createElement("div");
+                        var div = document.createElement("div")
                         div.id = "progress"
                         div.className = "progress" 
                         div.innerHTML = '<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>'
-                        document.getElementById("status").appendChild(div);
-                        break;
+                        document.getElementById("status").appendChild(div)
+                        break
                     case "interactive":
                         var div = document.createElement("div");
                         div.id = "progress"
                         div.className = "progress" 
                         div.innerHTML = '<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>'                    
-                        document.getElementById("status").appendChild(div);
-                        break;
+                        document.getElementById("status").appendChild(div)
+                        break
                     case "complete":
                         document.getElementById("progress").innerHTML = '<div class="progress-bar" role="progressbar bg-success" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>' 
                         var alert = document.getElementById("alert")
                         alert.className = "${alert[0]}"
                         alert.innerHTML="${alert[1]}"
-                        break;
+                        break
               }
-            });
+            })
         </script>
 `)
 }

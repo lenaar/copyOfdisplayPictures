@@ -22,7 +22,7 @@ app.get(prefix + '/pictures', displayPictures)
 server = require('http-shutdown')(server)
 
 app.get(prefix + '/avbryt', (req, res) => {
-    res.send('Finished application');
+    res.send('Finished application')
     res.end();
     server.shutdown(()=>console.log('Everything is cleanly shutdown.'))
 
