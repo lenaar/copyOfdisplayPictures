@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "start-dev": "nodemon app.js"
+    "start-dev": "nodemon app.js",
+    "test": "tape \"test/unit/**/*.js\" | tap-spec"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -12,6 +13,7 @@
     "kth-style": "^3.0.0-beta.8",
     "path": "^0.12.7",
     "request": "^2.85.0",
+    "standard": "^11.0.1",
     "tap-spec": "^5.0.0"
   },
   "devDependencies": {

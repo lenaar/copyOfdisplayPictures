@@ -17,16 +17,9 @@ function splitUrlAndComment (imgStr) {
 function combineHtmlString({url, comment}) {
     if (url ==='') return ''
     else if (comment === 'Ingen bild' || comment === 'Ogiltig adress') 
-        return `<div class="card">
-                    <div class="card-body"><div aria-live="polite" role="alert" class="alert alert-danger">${comment}</div> 
-                    </div>                   
-                </div>` 
+        return `<div class="card"><div class="card-body"><div aria-live="polite" role="alert" class="alert alert-danger">${comment}</div></div></div>` 
     else 
-        return `<div class="card">
-                    <div class="card-body"><img src="${url}" alt="${comment}"></div>
-                    <div class="card-body"><h4 class="card-title">${comment}</h4></div>                   
-                </div>`
-
+        return `<div class="card"><div class="card-body"><img src="${url}" alt="${comment}"></div><div class="card-body"><h4 class="card-title">${comment}</h4></div></div>`
 }
 
 async function displayPictures(req, res) {
